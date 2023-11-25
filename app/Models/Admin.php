@@ -18,11 +18,11 @@ class Admin extends Model
         'email',
     ];
 
-    public function tanggapans(){
+    public function tanggapan(){
         return $this->belongsToMany(Tanggapan::class);
     }
 
-    public function transaksis(){
-        return $this->belongsToMany(Transaksi::class);
+    public function transaksi(){
+        return $this->belongsToMany(Transaksi::class, 'id_admin', 'id_transaksi');
     }
 }

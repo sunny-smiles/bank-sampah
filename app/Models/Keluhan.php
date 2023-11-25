@@ -20,4 +20,8 @@ class Keluhan extends Model
     public function warga(){
         return $this->belongsTo(Warga::class, 'id_warga');
     }
+
+    public function tanggapan(){
+        return $this->hasOne(Tanggapan::class);
+    }
 }
