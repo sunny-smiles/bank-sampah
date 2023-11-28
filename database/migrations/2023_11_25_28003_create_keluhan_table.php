@@ -14,9 +14,8 @@ class CreateKeluhanTable extends Migration
     public function up()
     {
         Schema::create('keluhan', function (Blueprint $table) {
-            $table->id('id_keluhan');
-            $table->unsignedInteger('id_warga');
-            $table->text('isi_keluhan');
+            $table->id();
+            $table->bigInteger('id_warga')->unsigned();
             $table->string('foto_keluhan')->nullable();
             $table->timestamps();
 

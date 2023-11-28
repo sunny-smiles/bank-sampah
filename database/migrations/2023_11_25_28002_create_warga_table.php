@@ -14,14 +14,11 @@ class CreateWargaTable extends Migration
     public function up()
     {
         Schema::create('warga', function (Blueprint $table) {
-            $table->id('id_warga');
+            $table->id();
             $table->string('nama_warga');
             $table->string('password');
-            $table->string('email');
-            $table->unsignedInteger('id_saldo');
+            $table->string('email')->unique;
             $table->timestamps();
-
-            $table->foreign('id_saldo')->references('id')->on('saldo')->onDelete('cascade');
         });
     }
 

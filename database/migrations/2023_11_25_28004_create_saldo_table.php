@@ -14,8 +14,8 @@ class CreateSaldoTable extends Migration
     public function up()
     {
         Schema::create('saldo', function (Blueprint $table) {
-            $table->id('id_saldo');
-            $table->unsignedInteger('id_warga');
+            $table->id();
+            $table->bigInteger('id_warga')->unsigned();
             $table->decimal('jumlah_saldo', 10, 2)->default(0.00);
             $table->timestamps();
 

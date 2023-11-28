@@ -14,10 +14,10 @@ class CreateTransaksiTable extends Migration
     public function up()
     {
         Schema::create('transaksi', function (Blueprint $table) {
-            $table->id('id_transaksi');
-            $table->unsignedInteger('id_warga');
-            $table->unsignedInteger('id_admin')->nullable();
-            $table->unsignedInteger('id_petugas')->nullable();
+            $table->id();
+            $table->bigInteger('id_warga')->unsigned();
+            $table->bigInteger('id_admin')->unsigned()->nullable();
+            $table->bigInteger('id_petugas')->unsigned()->nullable();
             $table->decimal('harga_total', 10, 2);
             $table->timestamps();
 

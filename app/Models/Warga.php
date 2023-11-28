@@ -16,7 +16,6 @@ class Warga extends Model
         'password',
         'nomor_telepon',
         'email',
-        'id_saldo',
     ];
 
     public function saldo(){
